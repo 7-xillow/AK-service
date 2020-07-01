@@ -36,7 +36,7 @@ const NavigationBar = React.forwardRef(
 );
 
 NavigationBar.propTypes = {
-  onview: PropTypes.object,
+  onView: PropTypes.object,
   showArrow: PropTypes.object,
   scrollOnClick: PropTypes.func,
   slideOnClick: PropTypes.func,
