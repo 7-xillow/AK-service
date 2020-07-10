@@ -179,7 +179,8 @@ class App extends React.Component {
   render() {
     return (
       <StyledApp>
-        <img src="https://zillowclone.s3-us-west-1.amazonaws.com/1.png" width="100%" height="45"/>
+        <img src="https://zillowclone.s3-us-west-1.amazonaws.com/1.png"
+            alt="header 1/1" loading="lazy" width="100%" height="45"/>
     
         <Summary house={this.state.house} sl3Ref={this.sl3Ref}/>
         <NavigationBar ref={this.navbarRef}
