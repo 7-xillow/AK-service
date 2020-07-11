@@ -39,6 +39,7 @@ class App extends React.Component {
     // Variable
     this.sl3Height = 0;                                 // max height of summary line 3
     this.dpHeight = (innerHeight - 45 - 189 -45 - 20);  // min height of detail panel
+    this.oldScrollPosition = 0;
     
     // bind functions
     this.scrollOnClick = this.scrollOnClick.bind(this);
@@ -121,8 +122,11 @@ class App extends React.Component {
   }
 
   twoActionsOnScroll(e) {
-    this.slideOnScroll(e);
-    this.renderOnScroll(e);
+    if(Math.abs(this.dpRef.current.scrollTop - this.oldScrollPosition) > 60){
+      this.oldScrollPosition = this.dpRef.current.scrollTop;
+      this.slideOnScroll(e);
+      this.renderOnScroll(e);
+    }
   }
 
   slideOnScroll(e) { //to slide navigation bar when user scroll through the detail panel
@@ -179,8 +183,9 @@ class App extends React.Component {
   render() {
     return (
       <StyledApp>
-        <img src="https://zillowclone.s3-us-west-1.amazonaws.com/1.png"
-            alt="header 1/1" loading="lazy" width="100%" height="45"/>
+        <div id="header" width="100%"/>
+        {/* <img src="https://zillowclone.s3-us-west-1.amazonaws.com/1.png"
+            alt="header 1/1" loading="lazy" width="100%" height="45"/> */}
     
         <Summary house={this.state.house} sl3Ref={this.sl3Ref}/>
         <NavigationBar ref={this.navbarRef}
