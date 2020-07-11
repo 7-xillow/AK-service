@@ -4,7 +4,7 @@
   "description": "The aim is to create an app that resembles property page, summary and navigation bar of property page of Zillow",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --env prod",
     "watchbuild": "webpack --watch",
     "devServer": "nodemon server/index.js",
     "seedDB": "node database/seedDB.js",
@@ -41,6 +41,7 @@
     "@babel/preset-env": "^7.8.3",
     "@babel/preset-react": "^7.8.3",
     "babel-loader": "^8.0.6",
+    "compression-webpack-plugin": "^4.0.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^6.8.0",
