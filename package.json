@@ -27,6 +27,7 @@
   "homepage": "https://github.com/7-xillow/AK-service#readme",
   "dependencies": {
     "axios": "^0.19.2",
+    "compression": "^1.7.4",
     "express": "^4.17.1",
     "faker": "^4.1.0",
     "mongoose": "^5.8.9",
