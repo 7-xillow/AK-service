@@ -84,7 +84,7 @@ const DetailPanel = React.forwardRef(
           <img src="https://zillowclone.s3-us-west-1.amazonaws.com/20.png"
               alt="footer 2/3" loading="lazy" width="100%"/>
           <img src="https://zillowclone.s3-us-west-1.amazonaws.com/21.png"
-              alt="footer 3/2" loading="lazy" width="100%"/>
+              alt="footer 3/3" loading="lazy" width="100%"/>
         </div>
       </DP>
     );

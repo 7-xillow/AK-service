@@ -37,7 +37,7 @@ class App extends React.Component {
     this.dpRef = React.createRef();       // detail panel
 
     // Variable
-    this.sl3Height = 0;                             // max height of summary line 3
+    this.sl3Height = 0;                                 // max height of summary line 3
     this.dpHeight = (innerHeight - 45 - 189 -45 - 20);  // min height of detail panel
     
     // bind functions
