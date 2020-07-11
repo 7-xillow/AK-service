@@ -1,6 +1,7 @@
 const express = require('express');
-const port = 3002;
 const path = require('path');
+var compression = require('compression');
+const port = 3002;
 
 const retrieve = require('../database/retrieve.js'); // module for query a specific house in DB
 
@@ -8,8 +9,9 @@ const retrieve = require('../database/retrieve.js'); // module for query a speci
 var app = express();
 app.set('port', port);
 
-// parsing
+// parsing and gzip compression
 app.use(express.urlencoded({'extended': true}));
+app.use(compression())
 
 // specify the directory of static files
 app.use('/', express.static(path.join(__dirname, '../client/dist')));
